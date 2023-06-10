@@ -1,9 +1,9 @@
-var item= document.getElementsByClassName('list-group-item');
+var item= document.getElementsByClassName('item5');
 
 
-item[2].style.backgroundColor= 'green';
+item[0].style.backgroundColor= 'green';
 
-for(let i=0;i<item.length;i++)
-{
-    item[i].style.fontWeight= 'bold';
-}
+var li= document.getElementsByTagName('li');
+console.log(li);
+
+li[4].innerText= "I am changed by dom";
