@@ -1,27 +1,43 @@
-// var item= document.getElementsByClassName('item5');
+var main = document.querySelector('#main');
+var list= document.getElementById('items');
+var title= document.querySelector('div .title');
+var header= document.getElementById('header-title');
 
 
-// item[0].style.backgroundColor= 'green';
-
-// var li= document.getElementsByTagName('li');
-// console.log(li);
-
-// li[4].innerText= "I am changed by dom";
+main.parentElement.style.backgroundColor="grey";
+list.lastElementChild.textContent= "hello";
+console.log(list.lastChild);
 
 
-var item2 = document.querySelector('.list-group-item:nth-child(2)');
-item2.style.backgroundColor= "green";
+const node= document.createElement("li");
+const textNode= document.createTextNode("I am newly added li item");
 
-var item3 = document.querySelector('.list-group-item:nth-child(3)');
-item3.style.display= "none";
+node.appendChild(textNode);
 
-var item22= document.querySelectorAll('li');
-item22[1].style.color= "#90EE90";
 
-var odditem= document.querySelectorAll('li:nth-child(odd)');
+document.getElementById("items").appendChild(node);
 
-for(let i=0;i<odditem.length;i++)
-{
-    odditem[i].style.backgroundColor="#00FF00"
-}
+list.firstElementChild.style.color= "blue";
 
+console.log(list.firstChild);
+
+console.log(title.nextSibling);
+
+title.nextElementSibling[0].value= "type something";
+
+console.log(list.previousSibling);
+list.previousElementSibling.style.backgroundColor= "red";
+
+const newdiv= document.createElement('div');
+newdiv.className= "hello";
+newdiv.id= "hello1";
+newdiv.setAttribute("title", "head");
+const divtxt= document.createTextNode("HEllo word");
+console.log(newdiv);
+
+newdiv.appendChild(divtxt);
+
+var container = document.querySelector('header .container');
+var h1= document.querySelector('header h1');
+
+container.insertBefore(newdiv, h1);
