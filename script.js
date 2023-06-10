@@ -1,9 +1,9 @@
-var heading= document.getElementById('main-header');
-heading.style.borderBottom= 'solid 3px black';
+var item= document.getElementsByClassName('list-group-item');
+// console.log(item);
 
-var main = document.getElementById('main');
+item[2].style.backgroundColor= 'green';
 
-main.firstElementChild.style.color='green';
-main.firstElementChild.style.fontWeight= 'bold';
-
-
+for(let i=0;i<item.length;i++)
+{
+    item[i].style.fontWeight= 'bold';
+}
